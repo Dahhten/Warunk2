@@ -84,3 +84,11 @@
     font-size: 14px;
     font-weight: 700;
 }
+/*LOGIN UI*/
+.login-bar{
+    margin: auto;
+    text-align: center;
+    border-color: #272626;
+    border-style: solid;
+    padding-top: 15%;
+}
