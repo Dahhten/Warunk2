@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +12,143 @@
     <link rel="stylesheet" href="style-mobile-lit.css" />
     <link rel="stylesheet" href="style-mobile-dark.css" />-->
 </head>
+
 <body id="root">
+    <!-- NAVIGATION BAR -->
     <nav class="nav-box">
-        <img alt="gambar" src="icon.png" class="nav-left"/>
+        <img alt="gambar" src="icon.png" class="nav-left" />
+        <h1 class="web-title">WARUNK</h1>
         <div class="nav-center">
             <div class="search">
                 <input placeholder="   Search" type="text"></input>
                 <a href="#">Cari</a>
             </div>
+            <div class="menu-boxx">
+                <a class="menu-box" href="#">HOME</a>
+                <a class="menu-box" href="#">PERTANIAN</a>
+                <a class="menu-box" href="#">PRODUK</a>
+                <a class="menu-box" href="#">JASA</a>
+                <a class="menu-box" href="#">PELATIHAN</a>
+                <a class="menu-box" href="#">BANTUAN</a>
+            </div>
         </div>
-        <a class="nav-right" onClick="handleClick()">LogIn</a>
+        <a class="nav-right" id="nav-right" onClick="handleClick()">LogIn</a>
+        <div class="login-rec" id="login-rec">
+            <div class="trolley"><img src="bare/trolley.png" alt="trolley"></div>
+            <div class="profile-icon"><img src="bare/icon.png" alt="profile-icon"></div>
+        </div>
+
     </nav>
     <h3 id="login-name"></h3>
-    <button type="button" class="btn btn-primary">Primary</button>
+
+    <!-- LOGIN -->
+    <nav class="Login" id="login">
+        <img src="bare/bg.webp" alt="bg">
+        <div class="log-bg"></div>
+        <form class="login-bar" action="index.html">
+            <h1>SELAMAT DATANG</h1>
+            <label for="namaValue">Username</label>
+            <input type="text" id="namaValue"><br>
+            <label for="titleValue">Password</label>
+            <input type="password" id="titleValue"><br>
+            <input type="submit" onClick="login()">
+        </form>
+    </nav>
+
+    <!-- CONTENT -->
+    <nav class="content" id="content">
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><a href="#"><img src="bare/Slide1.jpg" alt="Banner 1"></a></div>
+                <div class="slide"><a href="#"><img src="bare/Slide2.jpg" alt="Banner 2"></a></div>
+                <div class="slide"><a href="#"><img src="bare/Slide3.jpg" alt="Banner 3"></a></div>
+                <div class="slide"><a href="#"><img src="bare/Slide4.jpg" alt="Banner 4"></a></div>
+                <div class="slide"><a href="#"><img src="bare/Slide5.jpg" alt="Banner 5"></a></div>
+            </div>
+            <button class="nav-button left"><img src="bare/prev.webp"></button>
+            <button class="nav-button right"><img src="bare/next.webp"></button>
+            <div class="navigation">
+                <div class="nav-dot active"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+            </div>
+        </div>
+
+        <div class="main-menu-container">
+            <div class="main-menu-ico"><a href=""><img src="" alt=""></a><p>Menu 1</p></div>
+            <div class="main-menu-ico"><a href=""><img src="" alt=""></a><p>Menu 2</p></div>
+            <div class="main-menu-ico"><a href=""><img src="" alt=""></a><p>Menu 3</p></div>
+            <div class="main-menu-ico"><a href=""><img src="" alt=""></a><p>Menu 4</p></div>
+            <div class="main-menu-ico"><a href=""><img src="" alt=""></a><p>Menu 5</p></div>
+        </div>
+
+        <div class="items-ireng">
+            <div class="product-list-container">
+                <!-- Produk akan dirender di sini oleh JavaScript -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- FOOTER --> 
+    <nav class="footer">
+        <div class="footer2">
+            <div class="frame-4">
+                <img class="logo" src="bare/logo0.png" alt="Logo" />
+                <div class="rights">2024 ALL RIGHTS RESERVED</div>
+            </div>
+            <div class="desc">
+                <span>
+                    <span class="desc-highlight">Gank </span>
+                    is a content membership platform that helps content creators accept
+                    donations, sell goods and services, and manage memberships at 0%
+                    platform fees.
+                </span>
+            </div>
+            <div class="place">
+                Gank Pte. Ltd.<br />
+                1 Pemimpin Drive, #08-01<br />
+                Singapore 576151<br />
+                Email: support@ganknow.com
+            </div>
+            <div class="links">
+                <span>
+                    <a href="#" class="link">Ketentuan Penggunaan</a><br />
+                    <a href="#" class="link">Kebijakan Privasi</a><br />
+                    <a href="#" class="link">Kebijakan Pengembalian Dana</a><br />
+                    <a href="#" class="link">FAQ</a><br />
+                    <a href="#" class="link">Blog</a><br />
+                    <a href="#" class="link">Creator University</a>
+                </span>
+            </div>
+            <div class="apps">
+                <img class="google-play" src="bare/google-play-10.png" alt="Google Play" />
+                <img class="app-store" src="bare/app-store-10.png" alt="App Store" />
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="#" class="social-icon">
+                <div class="circle"><img src="bare/instagram0.svg" alt="Instagram" /></div>
+            </a>
+            <a href="#" class="social-icon">
+                <div class="circle"><img src="bare/facebook0.svg" alt="Facebook" /></div>
+            </a>
+            <a href="#" class="social-icon">
+                <div class="circle"><img src="bare/youtube0.svg" alt="YouTube" /></div>
+            </a>
+            <a href="#" class="social-icon">
+                <div class="circle"><img src="bare/twitter0.svg" alt="Twitter" /></div>
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- JAVASCRIPT -->
     <script src="index.js"></script>
+    <script src="app.js" type="module"></script>
+    <script src="product_list/products.js"></script>
 </body>
+
 </html>
