@@ -10,7 +10,7 @@ export const Product = ({ itemImg, itemDesc, itemTitle }: Props) => {
     <>
       <div className="row">
         {itemTitle.map((Title, index) => (
-          <div className="card m-2" style={{ width: "18rem" }}>
+          <div key={index} className="card m-2" style={{ width: "18rem" }}>
             <img src={itemImg[index]} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{Title}</h5>

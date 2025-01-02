@@ -4,17 +4,22 @@
 import { Alert } from "./components/Alert";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
+import { Form } from "./components/Form";
 import { Product } from "./components/Product";
 import { useState } from "react";
 
 export const App = () => {
-  const [itemImgTemp, setItemImgTemp] = useState("");
-  const [itemImg, setItemImg] = useState<string[]>([]);
-  const [itemTitleTemp, setItemTitleTemp] = useState("");
-  const [itemTitle, setItemTitle] = useState([]);
-  const [itemDescTemp, setItemDescTemp] = useState("");
-  const [itemDesc, setItemDesc] = useState([]);
-  const [item, setItem] = useState<string[]>([]);
+  const itemValue = [
+    {
+      Img: "",
+      Title: "",
+      Desc: "",
+    },
+  ];
+  let itemImg = ["img"];
+  let itemDesc = ["title"];
+  let itemTitle = ["desc"];
+  const [data, setData] = useState([itemValue]);
   const [input, setInput] = useState("");
   const [alertnya, setAlertnya] = useState("");
   const [visibility, setVisibility] = useState(false);
@@ -45,33 +50,25 @@ export const App = () => {
           setInput(value);
         }}
       ></Input>
-      {/*Image */}
-      <Input
-        onChange={(value: string) => {
-          setItemImgTemp(value);
-        }}
-      ></Input>
-      {/* Title */}
-      <Input
-        onChange={(value: string) => {
-          setItemTitleTemp(value);
-        }}
-      ></Input>
-      {/* Desc */}
-      <Input
-        onChange={(value: string) => {
-          setItemDescTemp(value);
-        }}
-      ></Input>
       <Button
         onClick={() => {
           setVisibility(true);
           setAlertnya(input);
-          setItem([...item]);
         }}
       >
         Edit
       </Button>
+      <div className="mt-5">
+        <Form
+          onSubmit={(image: string, title: string, desc: string) => {
+            itemImg.push(image);
+            itemTitle.push(title);
+            itemDesc.push(desc);
+            console.log(itemImg);
+            console.log(itemTitle);
+          }}
+        ></Form>
+      </div>
     </div>
   );
 };

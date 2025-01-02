@@ -1,13 +1,19 @@
 interface Props {
   children: string;
   color?: "primary" | "secondary" | "success" | "danger";
+  type?: "button" | "submit";
   onClick: () => void;
 }
 
-export const Button = ({ children, color = "primary", onClick }: Props) => {
+export const Button = ({
+  children,
+  color = "primary",
+  type = "button",
+  onClick,
+}: Props) => {
   return (
     <>
-      <button type="button" className={"btn btn-" + color} onClick={onClick}>
+      <button type={type} className={"btn btn-" + color} onClick={onClick}>
         {children}
       </button>
     </>
